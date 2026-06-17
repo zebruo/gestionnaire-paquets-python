@@ -14,6 +14,8 @@ import gzip
 import io
 import webbrowser
 
+VERSION = "dev"
+
 
 def resource_path(relative_path):
     base = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
@@ -1019,7 +1021,7 @@ def afficher_aide():
 # INTERFACE GRAPHIQUE
 # -----------------------
 fenetre = tk.Tk()
-fenetre.title("Gestionnaire de paquets Python")
+fenetre.title(f"Gestionnaire de paquets Python{f' v{VERSION}' if VERSION != 'dev' else ''}")
 fenetre.geometry("1500x800")
 fenetre.configure(bg="#f5f5f5")
 

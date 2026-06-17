@@ -54,6 +54,14 @@ jobs:
             echo "SPEC_FILE=GestionnairePaquets.spec" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Injecter la version dans le source
+        shell: powershell
+        run: |
+          $v = "${{ steps.version.outputs.VERSION }}"
+          (Get-Content python_versions_gui.py) `
+            -replace 'VERSION = ".*"', "VERSION = `"$v`"" |
+            Set-Content python_versions_gui.py
+
       - name: Compiler avec PyInstaller
         run: python -m PyInstaller "${{ steps.spec.outputs.SPEC_FILE }}" --noconfirm
 
