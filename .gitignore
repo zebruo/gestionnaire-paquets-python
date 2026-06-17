@@ -1,0 +1,27 @@
+# Interface de gestion Git
+git-manager/
+
+# PyInstaller — dossiers générés automatiquement au build
+build/
+dist/
+release/
+
+# Sauvegardes
+*.bak
+python_versions_gui_backup/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Notes et roadmap (usage local uniquement)
+ameliorations.md
+
+# Script de build local (le CI/CD utilise release.yml)
+build_release.ps1
