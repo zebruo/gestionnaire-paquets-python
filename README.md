@@ -105,6 +105,17 @@ git push origin v1.0.0
 
 ---
 
+## Avertissement Windows SmartScreen
+
+L'exe n'est pas signé avec un certificat de code (*code signing certificate*).
+SmartScreen bloque par défaut tout exe inconnu.
+
+**Pour contourner l'avertissement :**
+1. Cliquez sur **Informations complémentaires**
+2. Puis sur **Exécuter quand même**
+
+---
+
 ## Dépannage
 
 **Le tableau reste vide** — vérifiez que Python est installé et accessible via `py` :
